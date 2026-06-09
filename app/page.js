@@ -19,7 +19,7 @@ export default function Home() {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-6 text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-white to-fuchsia-300">
-          NEXUS GATEWAY
+          JJ Confederation Ltd
         </h1>
 
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mb-12 leading-relaxed">
@@ -90,7 +90,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="relative z-10 text-center py-12 text-gray-600 text-xs font-mono tracking-wider uppercase">
-        <p>Nexus Gateway v1.0 // Encrypted Transmission</p>
+        <p>JJ Confederation Ltd // Encrypted Transmission</p>
       </footer>
     </main>
   );

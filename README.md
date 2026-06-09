@@ -1,4 +1,4 @@
-# Digital Download Gateway
+# JJ Confederation Ltd
 
 A production-ready Next.js application for secure digital product delivery integrated with Lemon Squeezy license key validation.
 

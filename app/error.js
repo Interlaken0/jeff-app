@@ -28,7 +28,7 @@ export default function GlobalError({ error, reset }) {
           </h2>
 
           <p className="text-gray-400 text-sm mb-8 font-mono leading-relaxed">
-            An unexpected system fault has occurred. Reinitialize the process or contact Nexus support.
+            An unexpected system fault has occurred. Reinitialize the process or contact JJ Confederation Ltd support.
           </p>
 
           <button

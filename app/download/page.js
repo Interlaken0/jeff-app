@@ -146,7 +146,7 @@ export default function DownloadPage() {
               href="/"
               className="text-xs font-mono text-gray-600 hover:text-cyan-400 transition uppercase tracking-wider"
             >
-              &larr; Return to Nexus
+              &larr; Return to JJ Confederation Ltd
             </Link>
           </div>
         </div>

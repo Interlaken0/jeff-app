@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'NEXUS // Secure Download Gateway',
-  description: 'Next-generation license validation and digital product delivery.',
+  title: 'JJ Confederation Ltd',
+  description: 'Secure digital product delivery and license management.',
 };
 
 export default function RootLayout({ children }) {
