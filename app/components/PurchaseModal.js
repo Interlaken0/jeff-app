@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 export default function PurchaseModal({ checkoutUrl }) {
   const [open, setOpen] = useState(false);
-  const isPlaceholder = !checkoutUrl || checkoutUrl.includes('your-store') || checkoutUrl.includes('xxxxxx');
+  const isPlaceholder = !checkoutUrl || checkoutUrl === '#' || checkoutUrl.includes('your-store') || checkoutUrl.includes('xxxxxx');
 
   if (!isPlaceholder) {
     return (
