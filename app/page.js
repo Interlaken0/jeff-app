@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import PurchaseModal from './components/PurchaseModal';
 
 export default function Home() {
   const checkoutUrl = process.env.NEXT_PUBLIC_LEMON_SQUEEZY_CHECKOUT_URL || '#';
@@ -28,15 +29,7 @@ export default function Home() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
-          <a
-            href={checkoutUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative inline-flex items-center justify-center rounded-lg bg-cyan-500/10 border border-cyan-500/40 px-8 py-3 text-lg font-semibold text-cyan-300 hover:bg-cyan-500/20 hover:border-cyan-400 transition-all box-glow-cyan"
-          >
-            <span className="absolute inset-0 rounded-lg bg-cyan-400/10 opacity-0 group-hover:opacity-100 transition" />
-            <span className="relative">Initialize Purchase</span>
-          </a>
+          <PurchaseModal checkoutUrl={checkoutUrl} />
 
           <Link
             href="/download"
