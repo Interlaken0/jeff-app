@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --neon-cyan: #22d3ee;
+    --neon-fuchsia: #e879f9;
+    --neon-violet: #8b5cf6;
+    --bg-dark: #030712;
+    --surface: rgba(17, 24, 39, 0.6);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-dark);
+    color: #e2e8f0;
+  }
+}
+
+@layer utilities {
+  .text-glow-cyan {
+    text-shadow: 0 0 8px rgba(34, 211, 238, 0.6), 0 0 24px rgba(34, 211, 238, 0.3);
+  }
+
+  .text-glow-fuchsia {
+    text-shadow: 0 0 8px rgba(232, 121, 249, 0.6), 0 0 24px rgba(232, 121, 249, 0.3);
+  }
+
+  .box-glow-cyan {
+    box-shadow: 0 0 12px rgba(34, 211, 238, 0.25), 0 0 4px rgba(34, 211, 238, 0.4);
+  }
+
+  .box-glow-fuchsia {
+    box-shadow: 0 0 12px rgba(232, 121, 249, 0.25), 0 0 4px rgba(232, 121, 249, 0.4);
+  }
+
+  .glass {
+    background: rgba(17, 24, 39, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(34, 211, 238, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
