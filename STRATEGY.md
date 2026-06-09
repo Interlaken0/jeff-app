@@ -2,6 +2,10 @@
 
 *A conversational walkthrough of how this whole thing works, why it's built this way, and what every piece does. No jargon. No fluff.*
 
+**JJ Confederation Ltd** — a sleek, futuristic digital product storefront that handles the entire journey from "I want to buy this" to "here's your secure download." Think of it as a digital bouncer for your files. A customer lands on your dark, cyberpunk-themed landing page, clicks through to pay via Lemon Squeezy, and in return gets a unique license key emailed straight to them. When they come back to your site and enter that key into the "Vault Access" form, your server secretly validates it with Lemon Squeezy behind the scenes — the browser never sees the actual validation API, so there's no way for anyone to cheat the system. If the key checks out, the server issues a temporary, cryptographically signed download token that's only valid for 15 minutes. The customer clicks the link, the token is verified again, and then they're redirected to the actual file. It's fast, secure, and every step is designed to prevent sharing, forging, or bypassing.
+
+What makes this more than just a pretty landing page is the layered security architecture baked into it. Every environment variable is validated at startup — if something's missing, the server screams immediately rather than failing silently later. The download tokens are HMAC-signed with a secret only your server knows, so even if someone intercepts a link, they can't generate a new one. Content Security Policy headers, HSTS, and frame-denial protections are all wired in through middleware. And because it's built as a Next.js standalone bundle, you can drop it onto Vercel, a Docker container, or any Node host with minimal fuss. Whether you're selling software, templates, ebooks, or anything digital, this gives you a production-grade pipeline where payments, license management, and secure delivery all talk to each other properly — no duct tape required.
+
 ---
 
 ## The Big Picture
